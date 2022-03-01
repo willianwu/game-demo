@@ -1,5 +1,9 @@
 #include "Game.h"
+#include "TexManager.h"
 using namespace std;
+
+
+
 
 Game::Game()
 {}
@@ -33,9 +37,11 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		}
 		isRunning = true;
 	}
+		
 	else {
 		isRunning = false;
 	}
+	playTex = TexManager::LoadTexture("asset/pixelman.png", renderer);
 }
 
 void Game::handleEvents()
@@ -54,14 +60,17 @@ void Game::handleEvents()
 
 void Game::update()
 {
-	cnt++;
-	cout << cnt << endl;
+	count++;
+	destR.h = 32;
+	destR.w = 32;
+	destR.x = count;
 }
 
 void Game::render()
 {
 	SDL_RenderClear(renderer);
 	//this is where we would add stuff to render
+	SDL_RenderCopy(renderer, playTex,NULL,&destR);
 	SDL_RenderPresent(renderer);
 }
 

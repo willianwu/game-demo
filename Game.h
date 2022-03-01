@@ -1,11 +1,12 @@
 #pragma once
 #include "SDL.h"
+#include "SDL_image.h"
 #include <iostream>
 class Game
 {
 public:
-	Game();
-	~Game();
+	Game(); //构造函数，可用于为某些成员变量设置初始值
+	~Game(); //在每次删除所创建的对象时执行
 	void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 	void handleEvents();
 	void update();
@@ -14,11 +15,12 @@ public:
 	bool running() { return isRunning; };
 
 private:
-	int cnt=0;
+	int count = 0;
 	bool isRunning;
 	SDL_Window* window;
 	SDL_Renderer* renderer;
-
+	SDL_Texture* playTex;
+	SDL_Rect srcR, destR;
 
 };
 
