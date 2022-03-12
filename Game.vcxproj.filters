@@ -30,6 +30,12 @@
     <ClCompile Include="Map.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ECS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Components.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -42,6 +48,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Map.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ECS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
